@@ -1,0 +1,26 @@
+<h2 class="centered">Restaurant Menu</h2>
+
+<div class="centered">
+<button id="addNewIngredient" type="button">Add</button>
+<button id="editIngredient" type="button">Edit</button>
+<button id="disableIngredient" type="button">Toggle Out of Stock Status</button>
+</div>
+<br>
+
+<ul style="list-style-type:none">
+    {{#each ingredients}}
+    <li class="ingredientList box" style="text-align:center"> 
+    <br>
+       {{this.name}} : Rs.{{this.price}}  
+       {{#if this.inStock}}
+        <span style="color:green;">&#10003;</span>
+        {{else}}
+        <span style="color:red;">&#10007;</span>
+       {{/if}}
+    <br>
+    <br>
+    </li>
+    {{/each}}
+</ul>
+
+

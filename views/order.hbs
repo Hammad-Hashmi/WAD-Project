@@ -1,0 +1,14 @@
+<h2 id="title">Make your order!</h2>
+
+Your Name: <input  id="customerName" type="text"><br>
+<br>
+
+<ol>
+    {{#each ingredients}}
+   	<input type="checkbox" class="ingredientOrder" {{#unless this.inStock}} disabled {{/unless}} name={{this.name}} value={{this.price}}> {{this.name}} | Rs. {{this.price}}<br>
+    {{/each}}
+</ol>
+
+Total: Rs. <p id="total"></p>
+
+<button id="makeOrder" type="submit">Good to go!</button>
